@@ -1,0 +1,262 @@
+html, body {
+    height: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main" 
+    "footer";
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(pics/floor-tile.png);
+}
+
+/*header */
+
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    text-align: center;
+
+    padding: 10px;
+
+    background: #333;
+    color: white;
+}
+
+main{
+    grid-area: main;
+    width: 90%;
+}
+
+
+.left-side-header{
+    float: left;
+}
+
+.right-side-header{
+    float: right;
+}
+.right-side-header nav ul li a{
+   font-size: large;
+   font-weight: bolder;
+}
+
+
+#sub_title{
+    font-size: small;
+}
+
+
+nav{
+    grid-area: nav;
+    text-align: center;
+    padding: 5px;
+    background: #333;
+}
+
+footer{
+    grid-area: footer;
+    position: fixed;
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* nav styling*/
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+nav ul li a:hover{
+    color: cadetblue;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+
+/*Profile section */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.profile{
+    text-align: center;
+    margin-left: 15px;
+}
+
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid transparent;
+    animation:  borderColorAnimation 3s infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left-side-menu {
+   list-style: none;
+   font-size: larger;
+   padding: 0;
+   border-radius: 5%;
+}
+
+.left-side-menu li:hover {
+    background-color: #eee6cb;
+    cursor: pointer;
+}
+
+.left-side-menu li{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.left-side-menu a {
+    margin: 10px;
+    color: darkblue;
+    font-weight: 100;
+    background: transparent;
+}
+
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: 0.5s ease;
+}
+.social-media-icon:hover {
+    transform: scale(1.5);    
+}
+
+/*Table Styling */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background: #333;
+    color: white;
+}
+tr{
+    background: #bdbbb5;
+}
+table.courses{
+    margin-bottom: 70px;
+}
+
+.courses tr:nth-child(even) {
+background-color: #d3d1ca;
+}
+
+/* Part 3 Fomr*/
+
+input[type='text']:focus, input[type='email']:focus, textarea:focus {
+    background: rgb(224, 223, 212);
+}
+
+input:required, textarea:required {
+    border: 3px solid rgb(100, 12, 12);
+}
+/*Subthing*/
+
+.about p:first-of-type::first-letter {
+    font-size: 1.5em;
+    color: rgb(98, 167, 212);
+    font-weight: bold;
+}
+
+.title {
+    border-bottom-color: lightgray;
+    border-bottom-style: dashed;
+    border-bottom-width: 4px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes borderColorAnimation {
+    0% {
+        border-color: rgb(163, 118, 189);
+    }
+    25% {
+        border-color: rgb(165, 105, 204);
+    }
+    50% {
+        border-color: rgb(92, 85, 199);
+    }
+    75% {
+        border-color: rgb(81, 176, 231);
+    }
+    100% {
+        border-color: rgb(111, 218, 125);
+    }
+}
+
+.form-div{
+    display: block;
+    margin: 10px;
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-submit{
+    width: 20%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    align-items: center;
+
+}
+
+.form-submit:hover {
+    background-color: #444;
+}
+.form-submit:active {
+    background-color: #555;
+}
